@@ -1,0 +1,32 @@
+{
+  "units": {
+    "baseUnit": "USD",
+    "unitNames": "MEX, EURO, YEN, YUAN, BTC",
+    "unitValues": "0.051, 1.10, 0.0093, 0.14, 8360.00"
+  },
+  "@@editor": [
+    {
+      "key": "units",
+      "name": "Units",
+      "icon": "ℹ️",
+      "source": "units.json",
+      "units": [
+        {
+          "key": "baseUnit",
+          "name": "Base Unit",
+          "type": "text"
+        },
+        {
+          "key": "unitNames",
+          "name": "Unit Names",
+          "type": "text"
+        },
+        {
+          "key": "unitTypes",
+          "name": "Unit Types",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}

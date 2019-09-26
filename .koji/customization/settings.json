@@ -1,0 +1,38 @@
+{
+  "settings": {
+    "name": "Converter",
+    "equalsText": "equals",
+    "locale": "US_en",
+    "fontFamily": "Be Vietnam"
+  },
+  "@@editor": [
+    {
+      "key": "settings",
+      "name": "App settings",
+      "icon": "⚙️",
+      "source": "settings.json",
+      "fields": [
+        {
+          "key": "name",
+          "name": "App name",
+          "type": "text"
+        },
+        {
+          "key": "equalsText",
+          "name": "Equals Text",
+          "type": "text"
+        },
+        {
+          "key": "locale",
+          "name": "Locale",
+          "type": "text"
+        },
+        {
+          "key": "fontFamily",
+          "name": "Google Font Family",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
