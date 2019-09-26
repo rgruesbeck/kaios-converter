@@ -1,10 +1,12 @@
-# Hello World with Browserify
-A blank template ready for your own favorite tools.
+# Converter
+A conversion builder
 
 ## VCCs
 > VCCs (Visual Customization Controls) help make your app easy for no-code creators to remix your app.
 - ⚙️ An example VCC for changing the app name.
     * [settings.json](#~/.koji/customization/settings.json!visual)
+    * [colors.json](#~/.koji/customization/colors.json!visual)
+    * [units.json](#~/.koji/customization/units.json!visual)
 
 ## Files
 - [index.html](#~/index.html) main html file for the app.
