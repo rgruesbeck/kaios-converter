@@ -12,30 +12,12 @@ class App {
 
 
         // setup handlers
-        this.addClickHandler();
         this.addChangeHandler();
 
         // set default output unit to second unit
         this.update({
             outputUnit: [...this.state.units.keys()][1]
         });
-    }
-
-    addClickHandler() {
-        document.addEventListener('click', (event) => {
-            if (event.target.matches('#setViewAdd')) {
-                this.setState({ view: 'add' });
-            }
-
-            if (event.target.matches('#setViewList')) {
-                this.setState({ view: 'list' });
-            }
-
-            if (event.target.matches('#createItem')) {
-                this.createItem(event);
-            }
-
-        }, false);
     }
 
     addChangeHandler() {
