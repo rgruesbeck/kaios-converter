@@ -22,21 +22,23 @@ class App {
 
     addChangeHandler() {
         document.addEventListener('change', (event) => {
+            let { action } = event.target.dataset;
+            if (!action) { return; }
 
             // set input amount
-            if (event.target.matches('#setInputAmount')) {
+            if (action === 'setInputAmount') {
 
                this.update({ inputAmount: event.target.value });
             }
 
             // set input unit
-            if (event.target.matches('#setInputUnit')) {
+            if (action === 'setInputUnit') {
 
                this.update({ inputUnit: event.target.value });
             }
 
             // set output unit
-            if (event.target.matches('#setOutputUnit')) {
+            if (action === 'setOutputUnit') {
 
                this.update({ outputUnit: event.target.value });
             }
@@ -158,8 +160,8 @@ class App {
         this.root.innerHTML = `
         <div class="container">
             <h1>${this.config.settings.name}</h1>
-            <input id="setInputAmount" value="${this.state.input.amount}"></input>
-            <select id="setInputUnit">
+            <input data-action="setInputAmount" value="${this.state.input.amount}"></input>
+            <select data-action="setInputUnit">
                 ${units.map(unit => {
                     return `
                         <option value="${unit}" ${unit === this.state.input.unit ? 'selected' : ''}>${unit}</option>
@@ -168,7 +170,7 @@ class App {
             </select>
             <div>${this.config.settings.equalsText}</div>
             <div>${Number.parseFloat(this.state.output.amount).toFixed(2)}</div>
-            <select id="setOutputUnit">
+            <select data-action="setOutputUnit">
                 ${units.map(unit => {
                     return `
                         <option value="${unit}" ${unit === this.state.output.unit ? 'selected' : ''}>${unit}</option>
